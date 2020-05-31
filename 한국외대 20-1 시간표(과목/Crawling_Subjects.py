@@ -31,7 +31,8 @@ select_campus = input('캠퍼스 입력 :')
 
 
 if '서울' in select_campus:
-    campus = driver.find_element_by_css_selector('body > div > form > div.table.write.margin_top30 > table > tbody > tr:nth-child(3) > td > label:nth-child(2)')
+    campus = driver.find_element_by_css_selector('body > div > form > div.table.write.margin_top30 > table > tbody > tr:nth-child(3) 
+                                                 > td > label:nth-child(2)')
     campus.click()
 
     search_major = input('검색할 학과 :')
@@ -41,7 +42,8 @@ if '서울' in select_campus:
             majors.click()
 
 elif '글로벌' in select_campus:
-    campus = driver.find_element_by_css_selector('body > div > form > div.table.write.margin_top30 > table > tbody > tr:nth-child(3) > td > label:nth-child(4)')
+    campus = driver.find_element_by_css_selector('body > div > form > div.table.write.margin_top30 > table > tbody > tr:nth-child(3) 
+                                                 > td > label:nth-child(4)')
     campus.click()
 
     search_major = input('검색할 학과 :')
