@@ -31,24 +31,28 @@ select_campus = input('캠퍼스 입력 :')
 
 
 if '서울' in select_campus:
-    campus = driver.find_element_by_css_selector('body > div > form > div.table.write.margin_top30 > table > tbody > tr:nth-child(3) 
+    campus = driver.find_element_by_css_selector('body > div > form > div.table.write.margin_top30
+                                                 > table > tbody > tr:nth-child(3) 
                                                  > td > label:nth-child(2)')
     campus.click()
 
     search_major = input('검색할 학과 :')
     for num in range(1, 72):
-        majors = driver.find_element_by_xpath('/html/body/div/form/div[1]/table/tbody/tr[4]/td/div/select/option[{}]'.format(num))
+        majors = driver.find_element_by_xpath('/html/body/div/form/div[1]/table/tbody
+                                              /tr[4]/td/div/select/option[{}]'.format(num))
         if search_major in majors.text:
             majors.click()
 
 elif '글로벌' in select_campus:
-    campus = driver.find_element_by_css_selector('body > div > form > div.table.write.margin_top30 > table > tbody > tr:nth-child(3) 
+    campus = driver.find_element_by_css_selector('body > div > form > div.table.write.margin_top30 
+                                                 > table > tbody > tr:nth-child(3) 
                                                  > td > label:nth-child(4)')
     campus.click()
 
     search_major = input('검색할 학과 :')
     for num in range(1, 64):
-        majors = driver.find_element_by_xpath('/html/body/div/form/div[1]/table/tbody/tr[4]/td/div/select/option[{}]'.format(num))
+        majors = driver.find_element_by_xpath('/html/body/div/form/div[1]/table/tbody
+                                              /tr[4]/td/div/select/option[{}]'.format(num))
         if search_major in majors.text:
             majors.click()
 
